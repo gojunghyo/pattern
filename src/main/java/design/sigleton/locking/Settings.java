@@ -1,6 +1,8 @@
 package design.sigleton.locking;
 
-public class Settings {
+import java.io.Serializable;
+
+public class Settings implements Serializable {
 
     /**
      * double checked locking JAVA 1.5 이하 이므로 volatile 제거
@@ -37,8 +39,12 @@ public class Settings {
         private static final Settings INSTANCE = new Settings();
     }
 
-    public Settings getInstance() {
+    public static Settings getInstance() {
         return SettingsHolder.INSTANCE;
+    }
+
+    protected Object readResolve() {
+        return getInstance(); //이방법으로 직렬화, 역직렬화를 이용한 싱글톤 꺠는 방법 해결가능
     }
 
 }
