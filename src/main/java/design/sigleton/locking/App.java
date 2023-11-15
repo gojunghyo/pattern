@@ -6,7 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class App {
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         /**
          * replection 을 이용한 비교 , 싱글톤을 꺠드리는 방법 1번
          */
@@ -33,7 +33,6 @@ public class App {
 //             instance2 = (Settings) in.readObject();
 //        }
 //        System.out.println(instance == instance2);
-
 
         /**
          * enum 클래스를 사용한 싱글톤
