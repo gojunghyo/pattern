@@ -19,6 +19,7 @@ git clone https://github.com/gojunghyo/pattern.git
 ## 설명서
 
 1. **Sigleton pattern **: 객체의 인스턴스를 하나만 생성하여 스레드 세이프하게 싱글톤으로 객체를 공유하여 사용하도록 합니다.
+2. **FactoryMethod pattern **: Factory interface를 두어 구현체로 (블랙쉽팩토리, 화이트쉽팩토리) 를 구현합니다, 해당 쉽팩토리는 쉽을 상속받은 블랙쉽과 화이트쉽을 제작하여 Ship을 return 하도록합니다.
    
    
    
